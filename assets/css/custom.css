@@ -1,0 +1,56 @@
+
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+}
+.section-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(91, 97, 102);
+}
+.search-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.search-select {
+    width: 40%;
+    margin-right: 10px;
+}
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+.price {
+    font-size: 14px;
+    color: #ff0000;
+    text-decoration: line-through;
+}
+.discount-price {
+    font-size: 14px;
+    color: #28a745;
+    font-weight: bold;
+}
+.ratings {
+    font-size: 14px;
+    color: #ffc107;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+.best-sale {
+    color: #1D77EB;
+}
+.navbar-brand {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.navbar-brand img {
+    width: 120px;
+}
+
+.navbar > .bg-light {
+    background-color: rgb(201, 89, 89);
+}

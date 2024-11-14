@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h5>Tambah Kategori</h5>
+                        <h5><?= $title ?></h5>
                         <small class="text-muted float-end">
                             <a href="<?= base_url('category') ?>" class="btn btn-secondary">
                                 <span class="me-2">
@@ -20,10 +20,10 @@
                 <div class="card-body">
                     <?= form_open(); ?>
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="name">Kategori</label>
+                            <label class="col-sm-2 col-form-label" for="nm_kategori">Kategori</label>
                             <div class="col-sm-10">
-                                <input  type="text" class="form-control <?= form_error('name') == true ? 'invalid' : '' ?>" name="name" id="name" placeholder="Masukan nama kategori...">
-                                <?= form_error('name') ?>
+                                <input  type="text" class="form-control <?= form_error('nm_kategori') == true ? 'invalid' : '' ?>" name="nm_kategori" id="nm_kategori" placeholder="Masukan nama kategori...">
+                                <?= form_error('nm_kategori') ?>
                             </div>
                         </div>
                         <div class="d-flex justify-content-end">

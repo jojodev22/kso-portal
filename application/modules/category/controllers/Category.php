@@ -29,12 +29,12 @@ class Category extends CI_Controller {
 
 		$data['title'] = "Tambah Kategori";
 		
-		$this->form_validation->set_rules('name', 'Nama Kategori', 'required');
+		$this->form_validation->set_rules('nm_kategori', 'Nama Kategori', 'required');
 		if($this->form_validation->run() == false) {
 			template_view('create', $data);
 		} else {
 			$input = $this->input->post(null, true);
-
+			var_dump($input);
 			$this->MainModel->insert('category', $input);
 
 			redirect('category');
@@ -50,7 +50,7 @@ class Category extends CI_Controller {
 		$data['title'] = 'Edit Kategori';
 		$data['kategori'] = $this->MainModel->get_where('category', ['id' => $id_category]);
 
-		$this->form_validation->set_rules('name', 'Nama Kategori', 'required');
+		$this->form_validation->set_rules('nm_kategori', 'Nama Kategori', 'required');
 		if($this->form_validation->run() == false) {
 			template_view('update', $data);
 		} else {
@@ -59,8 +59,6 @@ class Category extends CI_Controller {
 
 			redirect('category');
 		}
-
-
 	}
 
 	public function delete($id) 

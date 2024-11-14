@@ -54,31 +54,40 @@
   <h1 class="mb-4 section-title">Selamat Datang di <span class="best-sale">Portal Aplikasi KSO SCISI</span></h1>
   <p class="mb-4 section-subtitle">Silahkan pilih aplikasi yang anda inginkan. Kepuasan anda merupakan hadiah <br>terindah dari kerja keras kami.</p>
   
-  <!-- Search Bar -->
-  <div class="search-container">
-    <select name="" id="" class="form-select search-select">
-      <option selected>Cari Bagian</option>
-    </select>
-    <button class="btn btn-primary">Search</button>
-    <button class="btn btn-danger ms-2">Reset</button>
-  </div>
+  <form action="" method="POST">
+    <!-- Search Bar -->
+    <div class="search-container d-flex justify-content-center">
+      <select name="search" id="search" class="form-select search-select">
+        <option selected>Cari Bagian</option>
+        <?php foreach($kategori as $k): ?>
+          <option value="<?= $k['id'] ?>"><?= $k['nm_kategori'] ?></option>
+        <?php endforeach; ?>
+      </select>
+      <button type="submit" class="btn btn-primary">Search</button>
+      <!-- <button class="btn btn-danger ms-2">Reset</button> -->
+    </div>
+  </form>
 
   <!-- Card Section -->
   <div class="row">
+    <?php foreach($content as $c): ?>
     <!-- Card 1 -->
     <div class="col-md-3">
-      <div class="card">
-        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Course 1">
-        <div class="card-body">
-          <h5 class="card-title">Android Jetpack Compose : Jello eCommerce</h5>
-          <p><span class="price">Rp 550,000</span> <span class="discount-price">Rp 229,000</span></p>
-          <p class="ratings">★★★★★ (6)</p>
+      <a href="<?= $c['url'] ?>" class="href" style="font-size: 18px;font-weight: 500; color: rgb(91, 97, 102); text-decoration: none">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Course 1">
+          <div class="card-body">
+            <h5 class="card-title"><?= $c['name'] ?></h5>
+            <!-- <p><span class="price">Rp 550,000</span> <span class="discount-price">Rp 229,000</span></p> -->
+            <p class="ratings">★★★★★ (6)</p>
+          </div>
         </div>
-      </div>
+      </a>
+      <br>
     </div>
-
+    <?php endforeach; ?>
     <!-- Card 2 -->
-    <div class="col-md-3">
+    <!-- <div class="col-md-3">
       <div class="card">
         <img src="https://via.placeholder.com/150" class="card-img-top" alt="Course 2">
         <div class="card-body">
@@ -87,10 +96,10 @@
           <p class="ratings">★★★★★ (7)</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Card 3 -->
-    <div class="col-md-3">
+    <!-- <div class="col-md-3">
       <div class="card">
         <img src="https://via.placeholder.com/150" class="card-img-top" alt="Course 3">
         <div class="card-body">
@@ -99,10 +108,10 @@
           <p class="ratings">★★★★★ (7)</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Card 4 -->
-    <div class="col-md-3">
+    <!-- <div class="col-md-3">
       <div class="card">
         <img src="https://via.placeholder.com/150" class="card-img-top" alt="Course 4">
         <div class="card-body">
@@ -111,9 +120,9 @@
           <p class="ratings">★★★★★ (15)</p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Card 5 -->
-    <div class="col-md-3">
+    <!-- <div class="col-md-3">
       <div class="card">
         <img src="https://via.placeholder.com/150" class="card-img-top" alt="Course 4">
         <div class="card-body">
@@ -122,7 +131,7 @@
           <p class="ratings">★★★★★ (15)</p>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 

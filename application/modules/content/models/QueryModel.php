@@ -7,7 +7,7 @@ class QueryModel extends CI_Model
     {
         $sql = 'SELECT * 
                 FROM content a
-                LEFT JOIN category b ON a.category_id=b.id';
+                LEFT JOIN category b ON a.id_category=b.id';
 
         return $this->db->query($sql)->result_array();
     }

@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h5>Tambah Kategori</h5>
+                        <h5><?= $title; ?></h5>
                         <small class="text-muted float-end">
                             <a href="<?= base_url('category') ?>" class="btn btn-secondary">
                                 <span class="me-2">
@@ -18,17 +18,17 @@
                     </div> 
                 </div>
                 <div class="card-body">
-                    <?= form_open(); ?>
+                    <?= form_open_multipart('content/add'); ?>
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="category_id">Kategori</label>
+                            <label class="col-sm-2 col-form-label" for="id_category">Kategori</label>
                             <div class="col-sm-10">
-                                <select name="category_id" id="category_id" class="form-select <?= form_error('category_id') == true ? 'invalid' : '' ?>">
+                                <select name="id_category" id="id_category" class="form-select <?= form_error('id_category') == true ? 'invalid' : '' ?>">
                                     <option value="">-Pilih Kategori</option>
                                     <?php foreach($kategori as $k): ?>
                                         <option value="<?= $k['id'] ?>"><?= $k['nm_kategori'] ?></option>
                                     <?php endforeach ?>
                                 </select>
-                                <?= form_error('category_id') ?>
+                                <?= form_error('id_category') ?>
                             </div>
                         </div>
                         <div class="row mb-3">

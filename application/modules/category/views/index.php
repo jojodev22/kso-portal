@@ -19,8 +19,8 @@
                     </div>
                 </h5>
                 <div class="card-body">
-                    <div class="table-responsive text-nowrap">
-                        <table class="table table-bordered">
+                    <div class="table-responsive">
+                        <table id="datatable" class="table">
                             <thead>
                                 <tr>
                                     <th>No</th>

@@ -7,14 +7,23 @@ class Portal extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model(array(
-			'MainModel'
+			'MainModel',
+			'QueryModel'
 		));
 	}
 
 	public function index()
 	{
-		
-		$this->load->view('portal');
+		$data['kategori'] = $this->MainModel->get('category');
+		$search = $this->input->post('search');
+
+		if(!$search) {
+			$data['content'] = $this->MainModel->get('content');
+		} else {
+			$data['content'] = $this->QueryModel->getContent($search);
+		}
+
+		$this->load->view('portal', $data);
 	}
 
 }

@@ -10,7 +10,7 @@ class MainModel extends CI_Model
 
     public function get_where($table, $where)
     {
-        return $this->db->get_where($table, $where)->row();
+        return $this->db->get_where($table, $where)->row_array();
     }
 
     public function insert($table, $data = [])

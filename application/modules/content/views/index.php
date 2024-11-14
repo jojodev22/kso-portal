@@ -20,7 +20,7 @@
                 </h5>
                 <div class="card-body">
                     <div class="table-responsive text-nowrap">
-                        <table class="table table-bordered">
+                        <table id="datatable" class="table">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -37,7 +37,9 @@
                                 foreach($content as $c) : ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
-                                    <td></td>
+                                    <td>
+                                      <img src="<?= base_url('upload/' . $c['thumbnail']) ?>" class="img-thumbnail" width="80%" alt="">  
+                                    </td>
                                     <td><?= $c['name'] ?></td>
                                     <td>
                                         <a href="<?= $c['url'] ?>"><?= $c['url'] ?></a>
@@ -47,8 +49,8 @@
                                         <div class="dropdown">
                                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
                                             <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="<?= base_url('category/update/'. $c['id']) ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                            <a class="dropdown-item" href="<?= base_url('category/delete/'. $c['id']) ?>"><i class="bx bx-trash me-1"></i> Delete</a>
+                                            <a class="dropdown-item" href="<?= site_url("content/update/" . $c['id']); ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                            <a class="dropdown-item" href="<?= base_url('content/delete/' . $c['id']); ?>"><i class="bx bx-trash me-1"></i> Delete</a>
                                             </div>
                                         </div>   
                                     </td>
@@ -64,6 +66,7 @@
 	</div>
 </div>
 <!-- / Content -->
+
 
 
 

@@ -51,6 +51,12 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="<?= base_url() ?>/assets/js/config.js"></script>
+
+    <!-- Datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap4.min.css">
+
+     <!-- DataTables -->
+     <link rel="stylesheet" href="<?= base_url('') ?>assets/datatables/datatables-bs4/css/dataTables.bootstrap4.css">
     
 </head>
 
